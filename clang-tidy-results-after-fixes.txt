@@ -1,0 +1,218 @@
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:45:10: warning: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+   45 |          memset(leak, 'A', size > 100 ? 100 : size); // Touch some memory
+      |          ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:45:10: note: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11
+   45 |          memset(leak, 'A', size > 100 ? 100 : size); // Touch some memory
+      |          ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:57:10: warning: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+   57 |          memset(leak, 'T', size > 100 ? 100 : size);
+      |          ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:57:10: note: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11
+   57 |          memset(leak, 'T', size > 100 ? 100 : size);
+      |          ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:69:10: warning: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+   69 |          memset(leak, 'H', size > 100 ? 100 : size);
+      |          ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:69:10: note: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11
+   69 |          memset(leak, 'H', size > 100 ? 100 : size);
+      |          ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:85:10: warning: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+   85 |          memset(leak, 'R', size > 100 ? 100 : size);
+      |          ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:85:10: note: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11
+   85 |          memset(leak, 'R', size > 100 ? 100 : size);
+      |          ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:97:10: warning: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+   97 |          memset(leak, 'V', size > 100 ? 100 : size);
+      |          ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:97:10: note: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11
+   97 |          memset(leak, 'V', size > 100 ? 100 : size);
+      |          ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:105:6: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
+  105 |      strcpy(buffer, input); // CERT C ERR33-C violation
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:105:6: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+  105 |      strcpy(buffer, input); // CERT C ERR33-C violation
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:111:6: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
+  111 |      strcpy(temp, "This is dangerous"); // Using memory after freeing it
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:111:6: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+  111 |      strcpy(temp, "This is dangerous"); // Using memory after freeing it
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:111:6: warning: Use of memory after it is freed [clang-analyzer-unix.Malloc]
+  111 |      strcpy(temp, "This is dangerous"); // Using memory after freeing it
+      |      ^
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:209:10: note: Assuming 'argc' is > 1
+  209 |      if (argc > 1) {
+      |          ^~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:209:6: note: Taking true branch
+  209 |      if (argc > 1) {
+      |      ^
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:212:14: note: Assuming 'file' is null
+  212 |          if (file) {
+      |              ^~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:212:10: note: Taking false branch
+  212 |          if (file) {
+      |          ^
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:220:10: note: Calling 'process_user_input'
+  220 |          process_user_input(argv[1]);
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:109:26: note: Memory is allocated
+  109 |      char* temp = (char*)malloc(50);
+      |                          ^~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:110:6: note: Memory is released
+  110 |      free(temp);
+      |      ^~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:111:6: note: Use of memory after it is freed
+  111 |      strcpy(temp, "This is dangerous"); // Using memory after freeing it
+      |      ^      ~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:119:6: warning: Call to function 'sprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sprintf_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+  119 |      sprintf(query, "SELECT * FROM users WHERE username='%s';", username);
+      |      ^~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:119:6: note: Call to function 'sprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sprintf_s' in case of C11
+  119 |      sprintf(query, "SELECT * FROM users WHERE username='%s';", username);
+      |      ^~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:128:6: warning: Call to function 'sprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sprintf_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+  128 |      sprintf(command, "echo %s", cmd);
+      |      ^~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:128:6: note: Call to function 'sprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sprintf_s' in case of C11
+  128 |      sprintf(command, "echo %s", cmd);
+      |      ^~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:139:6: warning: Undefined or garbage value returned to caller [clang-analyzer-core.uninitialized.UndefReturn]
+  139 |      return result; // Could return garbage value
+      |      ^      ~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:134:6: note: 'result' declared without an initial value
+  134 |      int result; // Uninitialized
+      |      ^~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:135:10: note: Assuming 'input' is <= 100
+  135 |      if (input > 100) {
+      |          ^~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:135:6: note: Taking false branch
+  135 |      if (input > 100) {
+      |      ^
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:139:6: note: Undefined or garbage value returned to caller
+  139 |      return result; // Could return garbage value
+      |      ^      ~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:151:13: warning: format string is not a string literal (potentially insecure) [clang-diagnostic-format-security]
+  151 |      printf(userInput); // Should be printf("%s", userInput);
+      |             ^~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:151:13: note: treat the string as an argument to avoid this
+  151 |      printf(userInput); // Should be printf("%s", userInput);
+      |             ^
+      |             "%s", 
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:166:48: warning: format specifies type 'int' but the argument has type 'unsigned long' [clang-diagnostic-format]
+  166 |      printf("Processing data of length: %d\n", strlen(data));
+      |                                         ~~     ^~~~~~~~~~~~
+      |                                         %lu
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:179:10: warning: Call to function 'sprintf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sprintf_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+  179 |          sprintf(temp, "Leak iteration %d", i);
+      |          ^~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:179:10: note: Call to function 'sprintf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sprintf_s' in case of C11
+  179 |          sprintf(temp, "Leak iteration %d", i);
+      |          ^~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:215:14: warning: The 1st argument to 'fread' is a buffer with size 256 but should be a buffer with size equal to or greater than the value of the 2nd argument (which is 1) times the 3rd argument (which is 1024) [clang-analyzer-unix.StdCLibraryFunctions]
+  215 |              fread(buffer, 1, 1024, file); // Reading more than buffer size
+      |              ^     ~~~~~~  ~  ~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:209:10: note: Assuming 'argc' is > 1
+  209 |      if (argc > 1) {
+      |          ^~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:209:6: note: Taking true branch
+  209 |      if (argc > 1) {
+      |      ^
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:212:14: note: Assuming 'file' is non-null
+  212 |          if (file) {
+      |              ^~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:212:10: note: Taking true branch
+  212 |          if (file) {
+      |          ^
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:213:14: note: 'buffer' initialized here
+  213 |              char buffer[256];
+      |              ^~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:215:14: note: The 1st argument to 'fread' is a buffer with size 256 but should be a buffer with size equal to or greater than the value of the 2nd argument (which is 1) times the 3rd argument (which is 1024)
+  215 |              fread(buffer, 1, 1024, file); // Reading more than buffer size
+      |              ^     ~~~~~~  ~  ~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:233:12: warning: Value stored to 'should_free1' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+  233 |      void* should_free1 = conditional_leaker(3); // Returns ptr but never freed
+      |            ^~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:233:12: note: Value stored to 'should_free1' during its initialization is never read
+  233 |      void* should_free1 = conditional_leaker(3); // Returns ptr but never freed
+      |            ^~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:234:12: warning: Value stored to 'should_free2' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+  234 |      void* should_free2 = conditional_leaker(7); // Different leak path
+      |            ^~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:234:12: note: Value stored to 'should_free2' during its initialization is never read
+  234 |      void* should_free2 = conditional_leaker(7); // Different leak path
+      |            ^~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:235:12: warning: Value stored to 'should_free3' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+  235 |      void* should_free3 = conditional_leaker(12); // Another leak path
+      |            ^~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:235:12: note: Value stored to 'should_free3' during its initialization is never read
+  235 |      void* should_free3 = conditional_leaker(12); // Another leak path
+      |            ^~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:240:6: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
+  240 |      strcpy(another_leak, "More leaked data");
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:240:6: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+  240 |      strcpy(another_leak, "More leaked data");
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:244:6: warning: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+  244 |      memset(massive_leak, 'X', 10240); // Touch the memory
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:244:6: note: Call to function 'memset' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memset_s' in case of C11
+  244 |      memset(massive_leak, 'X', 10240); // Touch the memory
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:249:10: warning: Call to function 'sprintf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sprintf_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+  249 |          sprintf(string_array[i], "Leaked string %d", i);
+      |          ^~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:249:10: note: Call to function 'sprintf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sprintf_s' in case of C11
+  249 |          sprintf(string_array[i], "Leaked string %d", i);
+      |          ^~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:273:6: warning: Value stored to 'numbers' is never read [clang-analyzer-deadcode.DeadStores]
+  273 |      numbers = (int*)realloc(numbers, 20 * sizeof(int)); // Original might leak if realloc moves it
+      |      ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:273:6: note: Value stored to 'numbers' is never read
+  273 |      numbers = (int*)realloc(numbers, 20 * sizeof(int)); // Original might leak if realloc moves it
+      |      ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:274:6: warning: Value stored to 'numbers' is never read [clang-analyzer-deadcode.DeadStores]
+  274 |      numbers = (int*)malloc(30 * sizeof(int)); // Definite leak of previous realloc'd block
+      |      ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:274:6: note: Value stored to 'numbers' is never read
+  274 |      numbers = (int*)malloc(30 * sizeof(int)); // Definite leak of previous realloc'd block
+      |      ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:282:6: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
+  282 |      strcpy(nullPtr, "Will crash if null");
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:282:6: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+  282 |      strcpy(nullPtr, "Will crash if null");
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:308:6: warning: Call to function 'scanf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'scanf_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+  308 |      scanf("%d", &user_val);
+      |      ^~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:308:6: note: Call to function 'scanf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'scanf_s' in case of C11
+  308 |      scanf("%d", &user_val);
+      |      ^~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:310:12: warning: Value stored to 'buffer' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+  310 |      char* buffer = (char*)malloc(result); // Potential excessive allocation
+      |            ^~~~~~   ~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:310:12: note: Value stored to 'buffer' during its initialization is never read
+  310 |      char* buffer = (char*)malloc(result); // Potential excessive allocation
+      |            ^~~~~~   ~~~~~~~~~~~~~~~~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:314:6: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
+  314 |      strcpy(dangling, "Soon to be dangling");
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:314:6: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+  314 |      strcpy(dangling, "Soon to be dangling");
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:317:6: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
+  317 |      strcpy(dangling, "Using dangling pointer"); // Use after free
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:317:6: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+  317 |      strcpy(dangling, "Using dangling pointer"); // Use after free
+      |      ^~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:327:6: warning: Call to function 'fprintf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+  327 |      fprintf(log_file, "Log entry");
+      |      ^~~~~~~
+/home/athrvcloud/Bad_code_test/Verybad/Src/danger.c:327:6: note: Call to function 'fprintf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11
+  327 |      fprintf(log_file, "Log entry");
+      |      ^~~~~~~
